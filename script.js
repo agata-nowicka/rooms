@@ -23,7 +23,7 @@ function search() {
    if(input.value.length == 0){
         ul.style.display = "none";
         return;
-    }else{
+    } else {
         ul.style.display = "block";
     }
 
@@ -40,5 +40,15 @@ function search() {
 }
 
 function add(){
-  var x = getElementsByTagName("a");
+  var x = document.getElementsByTagName("a");
+}
+
+function room() {
+  var col = document.getElementsByClassName("col");
+  var color = col.backgroundColor;
+  if (color = "white") {
+    color = "red";
+  } else {
+    color = "white";
+  }
 }
