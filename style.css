@@ -1,0 +1,71 @@
+body {
+  background-color: #254E58 !important;
+  font: Helvetica, sans-serif !important;
+  color: #47423A !important; }
+
+nav {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px; }
+
+header, footer {
+  font: Helvetica, sans-serif;
+  background-color: #D9B595;
+  color: #47423A;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px; }
+
+main {
+  font: Helvetica, sans-serif;
+  background-color: #88BDBC;
+  color: #47423A;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px; }
+
+#myInput {
+  background-image: url("/css/searchicon.png");
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  display: block; }
+
+#list {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none; }
+
+#list li a {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block; }
+
+#add {
+  width: 10%; }
+
+#list li a:hover:not(.header) {
+  background-color: #eee; }
+
+#rooms {
+  width: 100%;
+  margin: 10px;
+  padding: 10px; }
+
+.col {
+  background-color: white;
+  margin: 10px;
+  padding: 10px; }
+
+/*# sourceMappingURL=style.css.map */
