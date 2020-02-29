@@ -15,8 +15,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
-    <!-- <link rel="stylesheet" href="arkusz.css">
-     <script src="skrypt.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+     <script src="script.js"></script> 
 
   </head>
   <div class="container-fluid">
@@ -40,7 +40,7 @@
    
    <main id="main-doc">
       <p id="date"></p>
-     <p> Add a pearson</p>
+     <h2> Add a pearson</h2>
      
   <!--<button type="button" onclick="show()">Student</button> 
   <button type="button" onclick="show()">Professor</button>
@@ -48,7 +48,8 @@
     
      <div id="search">
        
-      <input type="text" id="myInput" onkeyup="search()" placeholder="Type a name">         
+      <input type="text" id="myInput" onkeyup="search()" placeholder="Type a name"> 
+       <button id="add"><a href ="#choose_room">Add</a></button>
 
 <ul id="list">
   <li><a href="#"  class="student" onclick="add()">Agata Nowak</a></li>
@@ -68,7 +69,8 @@
 </ul> 
      </div>
    
-       <h2> First floor </h2>
+       <h2 id="choose_room"> Choose a room </h2> 
+     <p> Make a reservation for 3 hours </p>
         
      <div class="row row-cols-6" id="rooms">
        <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 100</button></div>
