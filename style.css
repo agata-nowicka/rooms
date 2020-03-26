@@ -1,5 +1,5 @@
 body {
-  background-color: #254E58 !important;
+  background-color: #254E58;
   font: Helvetica, sans-serif !important;
   color: #47423A !important; }
 
@@ -63,9 +63,18 @@ main {
   margin: 10px;
   padding: 10px; }
 
-.col {
-  background-color: white;
+.roomBtn {
+  font: Helvetica, sans-serif;
+  background-color: #D9B595;
+  color: #47423A;
+  padding: 10px;
   margin: 10px;
-  padding: 10px; }
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

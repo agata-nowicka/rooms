@@ -12,6 +12,9 @@
      <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <noscript>Sorry, your browser does not support JavaScript!</noscript>
@@ -48,24 +51,23 @@
     
      <div id="search">
        
-      <input type="text" id="myInput" onkeyup="search()" placeholder="Type a name"> 
-       <button id="add"><a href ="#choose_room">Add</a></button>
+      <input type="text" id="myInput" onkeyup="search()" class="output" placeholder="Type a name" value=" " onfocus="this.value=''"> 
 
 <ul id="list">
-  <li><a href="#"  class="student" onclick="add()">Agata Nowak</a></li>
-  <li><a href="#"  class="student">Agnieszka Nowak</a></li>
-  <li><a href="#"  class="student">Bartłomiej Nowak</a></li>
-  <li><a href="#"  class="student">Barbara Nwak</a></li>
-  <li><a href="#"  class="student">Cezary Nowak</a></li>
-  <li><a href="#"  class="student">Daniel Nowak</a></li>
-  <li><a href="#"  class="student">Marcin Nowak</a></li>
-  <li><a href="#"  class="prof">Prof 1</a></li>
-  <li><a href="#"  class="prof">Prof 2</a></li>
-  <li><a href="#"  class="prof">Prof 3</a></li>
-  <li><a href="#"  class="prof">Prof 4</a></li>
-  <li><a href="#"  class="prof">Prof 5</a></li>
-  <li><a href="#"  class="prof">Prof 6</a></li>
-  <li><a href="#"  class="prof">Prof 7</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Agata Nowak">Agata Nowak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Agnieszka Nowak">Agnieszka Nowak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Bartłomiej Nowak">Bartłomiej Nowak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Barbara Nowak">Barbara Nwak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Cezary Nowak">Cezary Nowak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Daniel Nowak">Daniel Nowak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Marcin Nowak">Marcin Nowak</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 1">Prof 1</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 2">Prof 2</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 3">Prof 3</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 4">Prof 4</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 5">Prof 5</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 6">Prof 6</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 7">Prof 7</a></li>
 </ul> 
      </div>
    
@@ -73,17 +75,18 @@
      <p> Make a reservation for 3 hours </p>
         
      <div class="row row-cols-6" id="rooms">
-       <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 100</button></div>
-  <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 101</div>
-  <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 102</div>
-  <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 103</div>  
-  <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 104</div>
-  <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 105</div>
-  <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 106</div>
-  <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 107</div>
-  <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 108</div>
-  <div class="col"> <button type="button" onclick="room()" id="roomBtn"> Room 109</div>  
-  <div class="col"> <button type="button" onclick="room()" id="roomBtn">Room 110</div>
+       <div class="col"> <button  type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 100</button></div>
+       <button type="button" onclick="room()">Set background color</button>
+  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 101</div>
+  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 102</div>
+  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 103</div>  
+  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 104</div>
+  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 105</div>
+  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 106</div>
+  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 107</div>
+  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 108</div>
+  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101"> Room 109</div>  
+  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 110</div>
 
 </div>
      
@@ -93,9 +96,7 @@
     <footer id="footer">
         Created by Agata Nowicka
       </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
   </body>
   </div>
   

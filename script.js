@@ -1,7 +1,24 @@
-var d = new Date();
+
+/*function myFunction() {
+  document.getElementsByClassName("roomBtn").style.backgroundColor = "red";
+}*/
+window.onload = function(){    
+        document.getElementById("myInput").value = "";   
+        var d = new Date();
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 document.getElementById("date").innerHTML = days[d.getDay()] + ", " + months[d.getMonth()] + " " + d.getDate();
+    }
+ 
+ function reply_click(clicked_id)
+  {
+    document.getElementById("myInput").value = clicked_id;
+    ul = document.getElementById("list");
+    ul.style.display = "none";
+  }
+
+
+
 
 function show() {
   var x = document.getElementById("myInput");
@@ -40,15 +57,13 @@ function search() {
 }
 
 function add(){
-  var x = document.getElementsByTagName("a");
+
 }
 
-function room() {
-  var col = document.getElementsByClassName("col");
-  var color = col.backgroundColor;
-  if (color = "white") {
-    color = "red";
-  } else {
-    color = "white";
-  }
+function room(c_id) {
+   
+  document.getElementById("c_id").style.backgroundColor = "red";
+  
+ 
 }
+
