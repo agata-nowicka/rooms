@@ -5,7 +5,7 @@
 
      <meta charset="utf-8">
   
-     <title>stronAgatki</title>
+     <title>Room reservation</title>
 
      <meta name="description" content="Opis zawartości strony dla wyszukiwarek 155-160 znaków">
      <meta name="keywords" content="słowa, kluczowe, opisujące, zawartość">
@@ -44,6 +44,7 @@
    <main id="main-doc">
       <p id="date"></p>
      <h2> Add a pearson</h2>
+     <p id="try"> </p>
      
   <!--<button type="button" onclick="show()">Student</button> 
   <button type="button" onclick="show()">Professor</button>
@@ -51,46 +52,59 @@
     
      <div id="search">
        
-      <input type="text" id="myInput" onkeyup="search()" class="output" placeholder="Type a name" value=" " onfocus="this.value=''"> 
+      <input type="text" id="myInput" onkeyup="search()" class="output" placeholder="Type a name" value=" " onfocus="this.value=''" onfocusout="myFunction(this.value)"> 
 
 <ul id="list">
-  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Agata Nowak">Agata Nowak</a></li>
-  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Agnieszka Nowak">Agnieszka Nowak</a></li>
-  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Bartłomiej Nowak">Bartłomiej Nowak</a></li>
-  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Barbara Nowak">Barbara Nwak</a></li>
-  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Cezary Nowak">Cezary Nowak</a></li>
-  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Daniel Nowak">Daniel Nowak</a></li>
-  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Marcin Nowak">Marcin Nowak</a></li>
-  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 1">Prof 1</a></li>
-  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 2">Prof 2</a></li>
-  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 3">Prof 3</a></li>
-  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 4">Prof 4</a></li>
-  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 5">Prof 5</a></li>
-  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 6">Prof 6</a></li>
-  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof 7">Prof 7</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Agata_Nowak">Agata Nowak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Agnieszka_Nowak">Agnieszka Nowak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Bartłomiej_Nowak">Bartłomiej Nowak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Barbara_Nowak">Barbara Nwak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Cezary_Nowak">Cezary Nowak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Daniel_Nowak">Daniel Nowak</a></li>
+  <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Marcin_Nowak">Marcin Nowak</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof_1">Prof 1</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof_2">Prof 2</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof_3">Prof 3</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof_4">Prof 4</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof_5">Prof 5</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof_6">Prof 6</a></li>
+  <li><a href="#"  class="prof" onClick="reply_click(this.id)" id="Prof_7">Prof 7</a></li>
 </ul> 
      </div>
    
        <h2 id="choose_room"> Choose a room </h2> 
      <p> Make a reservation for 3 hours </p>
+
         
      <div class="row row-cols-6" id="rooms">
-       <div class="col"> <button  type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 100</button></div>
-       <button type="button" onclick="room()">Set background color</button>
-  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 101</div>
-  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 102</div>
-  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 103</div>  
-  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 104</div>
-  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 105</div>
-  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 106</div>
-  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 107</div>
-  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 108</div>
-  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101"> Room 109</div>  
-  <div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="101">Room 110</div>
-
+     	<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn"id="R100">Room 100</button></div>
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R101">Room 101</div>
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R102">Room 102</div>
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R103">Room 103</div>  
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R104">Room 104</div>
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R105">Room 105</div>
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R106">Room 106</div>
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R107">Room 107</div>
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R108">Room 108</div>
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R109"> Room 109</div>  
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R110">Room 110</div>
 </div>
      
-    <button type="button" onclick="add()">Add to a room</button> 
+    <button type="button" id="add" onClick="alert()">Add to a room</button> 
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+  	
+    <p id="modalText1">Choose a person</p>
+    <p id="modalText2">Choose a room</p>
+    <button type="button" id="accept" onClick="accept()"  class="roomBtn">Accept</button> 
+    <button type="button" id="change" onClick="change()"  class="roomBtn">Change</button> 
+  </div>
+ 
+</div> 
     
     </main>
     <footer id="footer">

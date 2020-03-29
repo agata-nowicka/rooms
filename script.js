@@ -1,7 +1,3 @@
-
-/*function myFunction() {
-  document.getElementsByClassName("roomBtn").style.backgroundColor = "red";
-}*/
 window.onload = function(){    
         document.getElementById("myInput").value = "";   
         var d = new Date();
@@ -9,15 +5,33 @@ var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 document.getElementById("date").innerHTML = days[d.getDay()] + ", " + months[d.getMonth()] + " " + d.getDate();
     }
- 
+var choosenRoom;
+var choosenPearson;
+
+function myFunction(val) {
+  document.getElementById("try").innerHTML = "The input value has changed. The new value is: " + val;
+}
+
  function reply_click(clicked_id)
   {
-    document.getElementById("myInput").value = clicked_id;
+    document.getElementById("myInput").value = document.getElementById(clicked_id).textContent;
     ul = document.getElementById("list");
     ul.style.display = "none";
+    choosenPearson = document.getElementById("myInput").value; 
+    console.log(choosenPearson);   
+    document.getElementById("modalText1").innerHTML = document.getElementById("myInput").value;
   }
 
 
+
+function room(c_id) 
+{   
+  button = document.getElementById(c_id).id
+  ident =  document.getElementById(button)
+  var choosenRoom = button;
+  ident.style.color = "red"
+  document.getElementById("modalText2").innerHTML = document.getElementById(c_id).textContent;
+}
 
 
 function show() {
@@ -56,14 +70,32 @@ function search() {
   }
 }
 
-function add(){
+ //modal box
+//var modal = document.getElementById("myModal");
+
+//button that opens the modal
+//var btn = document.getElementById("myBtn");
+
+//<span> element that closes the modal
+//var span = document.getElementsByClassName("close");
+
+//open the modal
+function alert() {
+
+  document.getElementById("myModal").style.display = "block";
 
 }
 
-function room(c_id) {
-   
-  document.getElementById("c_id").style.backgroundColor = "red";
-  
- 
+//clicks on <span> (x), close the modal
+function change() {
+ document.getElementById("myModal").style.display = "none";
 }
+
+
+function accept() { 
+
+
+ document.getElementById("myModal").style.display = "none";
+}
+
 
