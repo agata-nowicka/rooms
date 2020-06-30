@@ -24,6 +24,9 @@ main {
   margin: 10px;
   border-radius: 5px; }
 
+.table-bordered {
+  color: #47423A; }
+
 #myInput {
   background-image: url("/css/searchicon.png");
   background-position: 10px 12px;

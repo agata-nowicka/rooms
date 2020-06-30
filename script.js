@@ -5,7 +5,7 @@ var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 document.getElementById("date").innerHTML = days[d.getDay()] + ", " + months[d.getMonth()] + " " + d.getDate();
     }
-var choosenRoom;
+// var choosenRoom;
 var choosenPearson;
 
 function myFunction(val) {
@@ -17,20 +17,21 @@ function myFunction(val) {
     document.getElementById("myInput").value = document.getElementById(clicked_id).textContent;
     ul = document.getElementById("list");
     ul.style.display = "none";
-    choosenPearson = document.getElementById("myInput").value; 
-    console.log(choosenPearson);   
+    choosenPearson = document.getElementById("myInput").value;     
     document.getElementById("modalText1").innerHTML = document.getElementById("myInput").value;
   }
 
-
+var tableId;
 
 function room(c_id) 
 {   
   button = document.getElementById(c_id).id
   ident =  document.getElementById(button)
-  var choosenRoom = button;
+  //var choosenRoom = button;
   ident.style.color = "red"
   document.getElementById("modalText2").innerHTML = document.getElementById(c_id).textContent;
+  tableId = button+"t";    
+ 
 }
 
 
@@ -83,19 +84,32 @@ function search() {
 function alert() {
 
   document.getElementById("myModal").style.display = "block";
+  
+//add choosen pearson to an adequate cell
+  document.getElementById(tableId).textContent = choosenPearson; 
 
 }
 
-//clicks on <span> (x), close the modal
+
 function change() {
  document.getElementById("myModal").style.display = "none";
+ fontColor();
 }
 
+function fontColor(){
+  var buttons = document.getElementsByClassName("roomBtn");
+  for (i = 0; i < buttons.length; i++) {  
+    buttons[i].style.color = "#47423A";
+    
+  }
+}
 
 function accept() { 
 
 
  document.getElementById("myModal").style.display = "none";
+ fontColor();
+ 
 }
 
 

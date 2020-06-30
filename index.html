@@ -24,18 +24,10 @@
   </head>
   <div class="container-fluid">
   <body class="text-center">
-   <nav>
-      </nav>
       <header id="header">
         <div class="row">
     <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
+      <h1>Make a reservation for a room</h1>     
     </div>
   </div>
         <p>
@@ -76,8 +68,7 @@
      <p> Make a reservation for 3 hours </p>
 
         
-     <div class="row row-cols-6" id="rooms">
-     	<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn"id="R100">Room 100</button></div>
+     <div class="row row-cols-5" id="rooms">     	
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R101">Room 101</div>
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R102">Room 102</div>
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R103">Room 103</div>  
@@ -86,11 +77,51 @@
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R106">Room 106</div>
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R107">Room 107</div>
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R108">Room 108</div>
-		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R109"> Room 109</div>  
+		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R109">Room 109</div>  
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R110">Room 110</div>
 </div>
      
-    <button type="button" id="add" onClick="alert()">Add to a room</button> 
+    <button type="button" id="add" onClick="alert()">Add to a room</button>    
+<br><br>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">101</th>
+          <th scope="col">102</th>
+          <th scope="col">103</th>
+          <th scope="col">104</th>
+          <th scope="col">105</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row" id="101"></td>
+          <td id="R102t"></td>
+          <td id="R103t"></td>
+          <td id="R104t"></td>
+          <td id="R105t"></td>
+        </tr>       
+      </tbody>
+      <thead>
+        <tr>
+          <th scope="col">106</th>
+          <th scope="col">107</th>
+          <th scope="col">108</th>
+          <th scope="col">109</th>
+          <th scope="col">110</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row" id="106"></td>
+          <td id="R107t"></td>
+          <td id="R108t"></td>
+          <td id="R109t"></td>
+          <td id="R110t"></td>
+        </tr>       
+      </tbody>
+    </table>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
