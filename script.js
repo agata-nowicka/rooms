@@ -1,3 +1,5 @@
+const input = document.querySelector('input');
+// get tday's date
 window.onload = function(){    
         document.getElementById("myInput").value = "";   
         var d = new Date();
@@ -5,19 +7,28 @@ var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 document.getElementById("date").innerHTML = days[d.getDay()] + ", " + months[d.getMonth()] + " " + d.getDate();
     }
-// var choosenRoom;
-var choosenPearson;
 
+let choosenRoom = 0;
+var choosenPerson;
+
+/*
+//test function - what I'm writing
 function myFunction(val) {
   document.getElementById("try").innerHTML = "The input value has changed. The new value is: " + val;
-}
+}*/
+
+/*document.getElementById("myInput").addEventListener('input', updateValue);
+
+function updateValue(e) {
+  document.getElementById("try").textContent = e.target.value;
+}*/
 
  function reply_click(clicked_id)
   {
     document.getElementById("myInput").value = document.getElementById(clicked_id).textContent;
     ul = document.getElementById("list");
     ul.style.display = "none";
-    choosenPearson = document.getElementById("myInput").value;     
+    choosenPerson = document.getElementById("myInput").value;     
     document.getElementById("modalText1").innerHTML = document.getElementById("myInput").value;
   }
 
@@ -27,7 +38,8 @@ function room(c_id)
 {   
   button = document.getElementById(c_id).id
   ident =  document.getElementById(button)
-  //var choosenRoom = button;
+  choosenRoom = button;
+  console.log(choosenRoom);
   ident.style.color = "red"
   document.getElementById("modalText2").innerHTML = document.getElementById(c_id).textContent;
   tableId = button+"t";    
@@ -44,8 +56,8 @@ function show() {
   } 
 }
 
-function search() {
-  // Declare variables
+//check if someone is on the list
+function search() {  
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('myInput');
   filter = input.value.toUpperCase();
@@ -59,6 +71,12 @@ function search() {
         ul.style.display = "block";
     }
 
+
+
+
+
+
+
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("a")[0];
@@ -69,7 +87,7 @@ function search() {
       li[i].style.display = "none";
     }
   }
-}
+} 
 
  //modal box
 //var modal = document.getElementById("myModal");
@@ -82,12 +100,11 @@ function search() {
 
 //open the modal
 function alert() {
-
-  document.getElementById("myModal").style.display = "block";
-  
-//add choosen pearson to an adequate cell
-  document.getElementById(tableId).textContent = choosenPearson; 
-
+if (!(document.getElementById("myInput").value)) {
+  document.getElementById("modalNoName").style.display = "block";
+  } else {
+   document.getElementById("myModal").style.display = "block";
+  }
 }
 
 
@@ -95,6 +112,11 @@ function change() {
  document.getElementById("myModal").style.display = "none";
  fontColor();
 }
+
+function closeM() {
+  document.getElementById("modalNoName").style.display = "none";
+  
+ }
 
 function fontColor(){
   var buttons = document.getElementsByClassName("roomBtn");
@@ -109,7 +131,23 @@ function accept() {
 
  document.getElementById("myModal").style.display = "none";
  fontColor();
+ //add choosen person to an adequate cell
+ document.getElementById(tableId).textContent = choosenPerson; 
+ document.getElementById("myInput").value = "";  
+ choosenRoom = 0;
+ console.log(choosenRoom);
  
+}
+
+function clearCell() {
+  if (choosenRoom = 0) {
+    document.getElementById("modalNoRoom").style.display = "block";
+    } else {
+      document.getElementById(tableId).textContent = "";
+      choosenRoom=0;
+    }
+    fontColor();
+   
 }
 
 

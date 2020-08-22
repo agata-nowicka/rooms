@@ -37,6 +37,7 @@
       <p id="date"></p>
      <h2> Add a pearson</h2>
      <p id="try"> </p>
+ 
      
   <!--<button type="button" onclick="show()">Student</button> 
   <button type="button" onclick="show()">Professor</button>
@@ -44,7 +45,7 @@
     
      <div id="search">
        
-      <input type="text" id="myInput" onkeyup="search()" class="output" placeholder="Type a name" value=" " onfocus="this.value=''" onfocusout="myFunction(this.value)"> 
+      <input type="text" id="myInput"  class="output" placeholder="Type a name" value=" " onkeyup="search()" onfocus="this.value=''" > 
 
 <ul id="list">
   <li><a href="#"  class="student" onClick="reply_click(this.id)" id="Agata_Nowak">Agata Nowak</a></li>
@@ -81,7 +82,9 @@
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R110">Room 110</div>
 </div>
      
-    <button type="button" id="add" onClick="alert()">Add to a room</button>    
+    <button type="button" id="add" onClick="alert()">Add or change a person in the choosen room</button>    
+
+<button type="button" id="clear" onClick="clearCell()">Clear the choosen room</button>    
 <br><br>
 
     <table class="table table-bordered">
@@ -133,6 +136,28 @@
     <p id="modalText2">Choose a room</p>
     <button type="button" id="accept" onClick="accept()"  class="roomBtn">Accept</button> 
     <button type="button" id="change" onClick="change()"  class="roomBtn">Change</button> 
+  </div>
+ 
+</div> 
+
+<!-- The Modal when there is no name choosen -->
+<div id="modalNoName" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+  	
+    <p id="mText1">Choose a person</p>    
+    <button type="button" id="accept" onClick="closeM()"  class="roomBtn">OK</button>   
+  </div>
+
+  <!-- The Modal when there is no room choosen -->
+<div id="modalNoRoom" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+  	
+    <p id="mText2">Choose a room</p>    
+    <button type="button" id="accept" onClick="closeM()"  class="roomBtn">OK</button>   
   </div>
  
 </div> 
