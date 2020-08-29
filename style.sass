@@ -37,8 +37,11 @@ main
   color: $font-color
   @include shape(10px, 10px, 5px)
 
-.table-bordered
+table
+  table-layout: fixed
+  width: 100%
   color: $font-color
+  
 
 #myInput 
   background-image: url('/css/searchicon.png') /* Add a search icon to input */
@@ -96,6 +99,17 @@ main
   font-size: 16px 
   cursor: pointer
 
+.fnctBtn
+  font: $main-font
+  background-color: $main-color
+  color: $secondary-color
+  @include shape(10px, 10px, 5px)
+  border: none
+  text-align: center
+  text-decoration: none
+  
+  font-size: 16px 
+  cursor: pointer
 
 @for $i from 100 through 110
   #R#{$i}

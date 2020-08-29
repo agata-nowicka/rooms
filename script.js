@@ -10,6 +10,7 @@ document.getElementById("date").innerHTML = days[d.getDay()] + ", " + months[d.g
 
 let choosenRoom = 0;
 var choosenPerson;
+var buttons = document.getElementsByClassName("roomBtn");
 
 /*
 //test function - what I'm writing
@@ -39,10 +40,21 @@ function room(c_id)
   button = document.getElementById(c_id).id
   ident =  document.getElementById(button)
   choosenRoom = button;
-  console.log(choosenRoom);
+
+  for (i = 0; i < buttons.length; i++) {  
+    if (buttons[i].style.color = "red"){
+      buttons[i].style.color = "#47423A";
+    }
+  }
+    
+    
   ident.style.color = "red"
   document.getElementById("modalText2").innerHTML = document.getElementById(c_id).textContent;
   tableId = button+"t";    
+
+  
+    
+
  
 }
 
@@ -115,11 +127,16 @@ function change() {
 
 function closeM() {
   document.getElementById("modalNoName").style.display = "none";
-  
+   
+ }
+
+ function closeM2() {
+  document.getElementById("modalNoRoom").style.display = "none";
+   
  }
 
 function fontColor(){
-  var buttons = document.getElementsByClassName("roomBtn");
+  
   for (i = 0; i < buttons.length; i++) {  
     buttons[i].style.color = "#47423A";
     
@@ -128,19 +145,21 @@ function fontColor(){
 
 function accept() { 
 
-
+  let currenthour = new Date().getHours() + ":" + new Date().getMinutes();
+  let finalhour = new Date().getHours() + 3 + ":" + new Date().getMinutes();
  document.getElementById("myModal").style.display = "none";
  fontColor();
  //add choosen person to an adequate cell
- document.getElementById(tableId).textContent = choosenPerson; 
+ document.getElementById(tableId).textContent = 
+ choosenPerson + '\n' + currenthour + '-' +  finalhour;
+
  document.getElementById("myInput").value = "";  
  choosenRoom = 0;
- console.log(choosenRoom);
- 
+
 }
 
 function clearCell() {
-  if (choosenRoom = 0) {
+  if (choosenRoom == 0) {
     document.getElementById("modalNoRoom").style.display = "block";
     } else {
       document.getElementById(tableId).textContent = "";

@@ -37,11 +37,7 @@
       <p id="date"></p>
      <h2> Add a pearson</h2>
      <p id="try"> </p>
- 
      
-  <!--<button type="button" onclick="show()">Student</button> 
-  <button type="button" onclick="show()">Professor</button>
-  <button type="button" onclick="other()">Other</button> -->
     
      <div id="search">
        
@@ -69,7 +65,7 @@
      <p> Make a reservation for 3 hours </p>
 
         
-     <div class="row row-cols-5" id="rooms">     	
+<div class="row row-cols-5" id="rooms">     	
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R101">Room 101</div>
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R102">Room 102</div>
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R103">Room 103</div>  
@@ -81,13 +77,19 @@
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R109">Room 109</div>  
 		<div class="col"> <button type="button" onClick="room(this.id)" class="roomBtn" id="R110">Room 110</div>
 </div>
-     
-    <button type="button" id="add" onClick="alert()">Add or change a person in the choosen room</button>    
 
-<button type="button" id="clear" onClick="clearCell()">Clear the choosen room</button>    
-<br><br>
+  <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-12 ">
+        <button type="button" class="fnctBtn" id="add" onClick="alert()">Add or change a person in the choosen room</button>    
+  </div>
+  <div class="col-md-6 col-sm-12 ">
+    <button type="button" class="fnctBtn" id="clear" onClick="clearCell()">Clear the choosen room</button>    
+  </div> 
+  </div>
+    <br><br>
 
-    <table class="table table-bordered">
+    <div class="row">
+    <table class="table table-striped">
       <thead>
         <tr>
           <th scope="col">101</th>
@@ -125,6 +127,7 @@
         </tr>       
       </tbody>
     </table>
+    </div>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -148,7 +151,9 @@
   	
     <p id="mText1">Choose a person</p>    
     <button type="button" id="accept" onClick="closeM()"  class="roomBtn">OK</button>   
+  
   </div>
+</div>
 
   <!-- The Modal when there is no room choosen -->
 <div id="modalNoRoom" class="modal">
@@ -157,7 +162,7 @@
   <div class="modal-content">
   	
     <p id="mText2">Choose a room</p>    
-    <button type="button" id="accept" onClick="closeM()"  class="roomBtn">OK</button>   
+    <button type="button"  onClick="closeM2()"  class="roomBtn">OK</button>   
   </div>
  
 </div> 
