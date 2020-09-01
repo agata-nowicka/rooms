@@ -41,7 +41,33 @@ table
   table-layout: fixed
   width: 100%
   color: $font-color
+  border-radius: 10px  
   
+
+table.table-bordered > thead > tr > th
+  border-color: $font-color  
+
+table.table-bordered > tbody > tr > td
+  border-color: $font-color
+
+  /* top-left border-radius */
+table tr:first-child th:first-child 
+  border-top-left-radius: 6px
+
+/* top-right border-radius */
+table tr:first-child th:last-child 
+  border-top-right-radius: 6px
+
+/* bottom-left border-radius */
+table tr:last-child td:first-child 
+  border-bottom-left-radius: 6px
+
+/* bottom-right border-radius */
+table tr:last-child td:last-child 
+  border-bottom-right-radius: 6px
+
+ 
+
 
 #myInput 
   background-image: url('/css/searchicon.png') /* Add a search icon to input */
@@ -101,13 +127,14 @@ table
 
 .fnctBtn
   font: $main-font
+  width: auto
   background-color: $main-color
   color: $secondary-color
   @include shape(10px, 10px, 5px)
   border: none
   text-align: center
   text-decoration: none
-  
+  display: inline-block
   font-size: 16px 
   cursor: pointer
 

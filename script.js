@@ -5,24 +5,19 @@ window.onload = function(){
         var d = new Date();
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-document.getElementById("date").innerHTML = days[d.getDay()] + ", " + months[d.getMonth()] + " " + d.getDate();
-    }
+document.getElementById("date").innerHTML = days[d.getDay()] + ", " + months[d.getMonth()] + " " + d.getDate() ;
+   
+//print current input
+  document.getElementById("myInput").addEventListener('input', updateValue);
+  function updateValue(e) {    
+    choosenPerson = e.target.value;    
+  }
+
+}
 
 let choosenRoom = 0;
 var choosenPerson;
 var buttons = document.getElementsByClassName("roomBtn");
-
-/*
-//test function - what I'm writing
-function myFunction(val) {
-  document.getElementById("try").innerHTML = "The input value has changed. The new value is: " + val;
-}*/
-
-/*document.getElementById("myInput").addEventListener('input', updateValue);
-
-function updateValue(e) {
-  document.getElementById("try").textContent = e.target.value;
-}*/
 
  function reply_click(clicked_id)
   {
@@ -51,11 +46,6 @@ function room(c_id)
   ident.style.color = "red"
   document.getElementById("modalText2").innerHTML = document.getElementById(c_id).textContent;
   tableId = button+"t";    
-
-  
-    
-
- 
 }
 
 
@@ -85,10 +75,6 @@ function search() {
 
 
 
-
-
-
-
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("a")[0];
@@ -101,18 +87,11 @@ function search() {
   }
 } 
 
- //modal box
-//var modal = document.getElementById("myModal");
 
-//button that opens the modal
-//var btn = document.getElementById("myBtn");
-
-//<span> element that closes the modal
-//var span = document.getElementsByClassName("close");
 
 //open the modal
 function alert() {
-if (!(document.getElementById("myInput").value)) {
+if ((document.getElementById("myInput").value="")) {
   document.getElementById("modalNoName").style.display = "block";
   } else {
    document.getElementById("myModal").style.display = "block";

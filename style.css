@@ -27,7 +27,30 @@ main {
 table {
   table-layout: fixed;
   width: 100%;
-  color: #47423A; }
+  color: #47423A;
+  border-radius: 10px; }
+
+table.table-bordered > thead > tr > th {
+  border-color: #47423A; }
+
+table.table-bordered > tbody > tr > td {
+  border-color: #47423A;
+  /* top-left border-radius */ }
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 6px; }
+
+/* top-right border-radius */
+table tr:first-child th:last-child {
+  border-top-right-radius: 6px; }
+
+/* bottom-left border-radius */
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 6px; }
+
+/* bottom-right border-radius */
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 6px; }
 
 #myInput {
   background-image: url("/css/searchicon.png");
@@ -84,6 +107,7 @@ table {
 
 .fnctBtn {
   font: Helvetica, sans-serif;
+  width: auto;
   background-color: #254E58;
   color: #D9B595;
   padding: 10px;
@@ -92,6 +116,7 @@ table {
   border: none;
   text-align: center;
   text-decoration: none;
+  display: inline-block;
   font-size: 16px;
   cursor: pointer; }
 
