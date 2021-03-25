@@ -20,4 +20,4 @@ An application that allows you to reserve a room for 3 hours.
 
 
 ### Status
-The basic version of the project is still in progres. In the futer design will be polished, *change* feature won't clear the choosen name and number, typed name will appear in a modal box, dynamic list will dissapear after pressing *enter* even if there are still matching results. List of proposed results will be connected with a database with names or a name generator (E.g. https://www.fakenamegenerator.com/)
+The basic version of the project is still in progres. In the future the design will be polished, *change* feature won't clear the choosen name and number, typed name will appear in a modal box, dynamic list will dissapear after pressing *enter* even if there are still matching results. List of proposed results will be connected with a database with names or a name generator (E.g. https://www.fakenamegenerator.com/)
